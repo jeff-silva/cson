@@ -1,0 +1,9 @@
+<template>
+  <div>Cash</div>
+</template>
+
+<script>
+export default {
+  // 
+}
+</script>
