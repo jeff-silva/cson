@@ -72,6 +72,8 @@
             </template>
           </v-app-bar>
 
+          <!-- <pre>{{ display }}</pre> -->
+
           <v-container>
             <slot />
           </v-container>
@@ -112,6 +114,9 @@
   import useFake from '@/composables/useFake';
   const fake = useFake();
 
+  import { useDisplay } from 'vuetify';
+  const display = useDisplay();
+
   const title = ref('');
 
   const route = useRoute();
@@ -127,7 +132,7 @@
   onMounted(getTitle);
 
   const menu = ref({
-    drawer: true,
+    drawer: !display.lg,
     pages: [
       {
         title: 'Página principal',
@@ -234,7 +239,7 @@
 
 
   const invite = ref({
-    drawer: true,
+    drawer: !display.lg,
     data: _.range(10).map((item, index) => {
       const map =  fake.map();
       const thumbnail = `https://play-cs.com/map_thumb/embed_v2/${map}.jpg`;
