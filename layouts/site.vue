@@ -108,11 +108,10 @@
 
 <script setup>
   import { ref, watch, onMounted } from 'vue';
-  import { faker } from '@faker-js/faker';
   import _ from 'lodash';
 
-  import useFake from '@/composables/useFake';
-  const fake = useFake();
+  import useFaker from '@/composables/useFaker';
+  const faker = useFaker();
 
   import { useDisplay } from 'vuetify';
   const display = useDisplay();
@@ -241,7 +240,7 @@
   const invite = ref({
     drawer: !display.lg,
     data: _.range(10).map((item, index) => {
-      const map =  fake.map();
+      const map =  faker.map();
       const thumbnail = `https://play-cs.com/map_thumb/embed_v2/${map}.jpg`;
       const username = faker.internet.userName();
       const country = faker.address.countryCode('alpha-2');

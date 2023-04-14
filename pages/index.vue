@@ -39,8 +39,8 @@
 
 <script setup>
   import { ref } from 'vue';
-  import useFake from '@/composables/useFake';
-  const fake = useFake();
+  import useFaker from '@/composables/useFaker';
+  const faker = useFaker();
 
   definePageMeta({
     layout: 'site'
@@ -51,14 +51,14 @@
   });
 
   const server = ref({
-    data: fake.fakeData(25, (item, index) => {
+    data: faker.fakeData(25, (item, index) => {
       let r = { index };
-      r.name = fake.music.songName();
-      r.map = fake.map();
-      r.mapThumbnail = fake.mapThumbnail(r.map);
-      r.username = fake.internet.userName();
-      r.country = fake.address.countryCode('alpha-2');
-      r.flag = fake.countryFlag(r.country);
+      r.name = faker.music.songName();
+      r.map = faker.map();
+      r.mapThumbnail = faker.mapThumbnail(r.map);
+      r.username = faker.internet.userName();
+      r.country = faker.address.countryCode('alpha-2');
+      r.flag = faker.countryFlag(r.country);
       return r;
     }),
   });
