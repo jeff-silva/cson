@@ -1,9 +1,13 @@
 <template>
-  <div>Cash</div>
+  Cash
 </template>
 
-<script>
-export default {
-  // 
-}
+<script setup>
+  definePageMeta({
+    layout: 'site'
+  });
+
+  useHead({
+    title: 'Cash',
+  });
 </script>

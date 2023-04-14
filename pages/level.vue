@@ -1,9 +1,13 @@
 <template>
-  <div>Level</div>
+  Level
 </template>
 
-<script>
-export default {
-  // 
-}
+<script setup>
+  definePageMeta({
+    layout: 'site'
+  });
+
+  useHead({
+    title: 'Level',
+  });
 </script>

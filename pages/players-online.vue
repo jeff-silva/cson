@@ -1,5 +1,5 @@
 <template>
-  Premium
+  Players online
 </template>
 
 <script setup>
@@ -8,6 +8,6 @@
   });
 
   useHead({
-    title: 'Premium',
+    title: 'Players Online',
   });
 </script>

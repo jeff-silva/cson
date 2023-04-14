@@ -1,9 +1,13 @@
 <template>
-  <div>Credits</div>
+  Credits
 </template>
 
-<script>
-export default {
-  // 
-}
+<script setup>
+  definePageMeta({
+    layout: 'site'
+  });
+
+  useHead({
+    title: 'Credits',
+  });
 </script>

@@ -1,9 +1,13 @@
 <template>
-  <div>FAQ</div>
+  FAQ
 </template>
 
-<script>
-export default {
-  name: 'faq',
-}
+<script setup>
+  definePageMeta({
+    layout: 'site'
+  });
+
+  useHead({
+    title: 'FAQ',
+  });
 </script>

@@ -1,9 +1,13 @@
 <template>
-  <div>Controls</div>
+  Controls
 </template>
 
-<script>
-export default {
-  // 
-}
+<script setup>
+  definePageMeta({
+    layout: 'site'
+  });
+
+  useHead({
+    title: 'Controls',
+  });
 </script>

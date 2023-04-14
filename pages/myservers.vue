@@ -1,13 +1,13 @@
 <template>
-  Premium
+  My Servers
 </template>
 
 <script setup>
   definePageMeta({
     layout: 'site'
   });
-
+  
   useHead({
-    title: 'Premium',
+    title: 'My Servers',
   });
 </script>

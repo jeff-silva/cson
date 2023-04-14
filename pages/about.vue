@@ -1,9 +1,13 @@
 <template>
-  <div>About</div>
+  Aboout
 </template>
 
-<script>
-export default {
-  // 
-}
+<script setup>
+  definePageMeta({
+    layout: 'site'
+  });
+
+  useHead({
+    title: 'About',
+  });
 </script>

@@ -1,71 +1,65 @@
 <template>
-  <div>
-    <app-search>
-      <template #filter>
-        <v-combobox
-          :items="options.countries"
-          label="Países"
-          multiple
-          chips
-        />
-        <v-combobox
-          :items="options.modes"
-          label="Game modes"
-          multiple
-          chips
-        />
-      </template>
-      <template #results>
-        <v-data-table
-          :headers="[
-            {sortable:false, text:'Rating/Perks'},
-            {sortable:false, text:'Server'},
-            {sortable:false, text:'Players by filter'},
-            {sortable:false, text:'Map'},
-          ]"
-          :items="[]"
-          :items-per-page="5"
-        ></v-data-table>
-      </template>
-    </app-search>
-  </div>
+  <v-table
+    v-bind="{
+      hover: true,
+    }"
+  >
+    <colgroup>
+      <col width="60px">
+      <col width="*">
+      <col width="*">
+      <col width="*">
+      <col width="*">
+    </colgroup>
+    <thead>
+      <tr>
+        <th>Rating/Perks</th>
+        <th>Server</th>
+        <th>Players</th>
+        <th>Map</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr v-for="s in server.data">
+        <td><v-img :src="s.mapThumbnail" width="60" height="40" cover /></td>
+        <td>
+          <div>{{ s.name }}</div>
+          <div>by {{ s.username }}</div>
+        </td>
+        <td>{{ s.username }}</td>
+        <td>{{ s.map }}</td>
+        <td>
+          <v-btn color="primary" to="/play">Connect</v-btn>
+        </td>
+      </tr>
+    </tbody>
+  </v-table>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      options: {
-        countries: [
-          {value:'ru', text:'Russia'},
-          {value:'sg', text:'Asia'},
-          {value:'br', text:'Brasil'},
-          {value:'de', text:'Germany'},
-          {value:'tr', text:'Turkey'},
-          {value:'ny', text:'USA (NYC)'},
-          {value:'sf', text:'USA (SF)'},
-        ],
-        modes: [
-          {value:'cs', text:'Hostage Rescue'},
-          {value:'de', text:'Bomb/Defuse'},
-          {value:'fy', text:'Fight/Yard'},
-          {value:'awp', text:'AWP/Sniper'},
-          {value:'scout', text:'Scout/Sniper'},
-          {value:'35hp', text:'35HP'},
-          {value:'aim', text:'AIM'},
-          {value:'gg', text:'Gun Game'},
-          {value:'dr', text:'Death Run'},
-          {value:'ffa', text:'FFA'},
-          {value:'hns', text:'Hide and Seek'},
-          {value:'lobby', text:'Lobby'},
-          {value:'training', text:'Training'},
-          {value:'as', text:'Escort a VIP'},
-          {value:'he', text:'Grenades'},
-          {value:'surf', text:'Surf'},
-          {value:'bhop', text:'BHOP'},
-        ],
-      },
-    };
-  },
-}
+<script setup>
+  import { ref } from 'vue';
+  import useFake from '@/composables/useFake';
+  const fake = useFake();
+
+  definePageMeta({
+    layout: 'site'
+  });
+
+  useHead({
+    title: 'Servers',
+  });
+
+  const server = ref({
+    data: fake.fakeData(25, (item, index) => {
+      let r = { index };
+      r.name = fake.music.songName();
+      r.map = fake.map();
+      r.mapThumbnail = fake.mapThumbnail(r.map);
+      r.username = fake.internet.userName();
+      r.country = fake.address.countryCode('alpha-2');
+      r.flag = fake.countryFlag(r.country);
+      return r;
+    }),
+  });
 </script>

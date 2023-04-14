@@ -1,5 +1,5 @@
 <template>
-  Premium
+  Game modes
 </template>
 
 <script setup>
@@ -8,6 +8,6 @@
   });
 
   useHead({
-    title: 'Premium',
+    title: 'Game Modes',
   });
 </script>

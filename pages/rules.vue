@@ -1,9 +1,13 @@
 <template>
-  <div>Rules</div>
+  Rules
 </template>
 
-<script>
-export default {
-  // 
-}
+<script setup>
+  definePageMeta({
+    layout: 'site'
+  });
+
+  useHead({
+    title: 'Rules',
+  });
 </script>

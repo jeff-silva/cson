@@ -1,9 +1,13 @@
 <template>
-  <div>Terms</div>
+  Terms
 </template>
 
-<script>
-export default {
-  // 
-}
+<script setup>
+  definePageMeta({
+    layout: 'site'
+  });
+
+  useHead({
+    title: 'Terms',
+  });
 </script>

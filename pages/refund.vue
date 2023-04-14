@@ -1,9 +1,13 @@
 <template>
-  <div>Refund</div>
+  Refund
 </template>
 
-<script>
-export default {
-  // 
-}
+<script setup>
+  definePageMeta({
+    layout: 'site'
+  });
+
+  useHead({
+    title: 'Refund',
+  });
 </script>
