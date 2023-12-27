@@ -1,0 +1,1 @@
+import{_ as o}from"./nuxt-layout.7CIupD4f.js";import{u as e}from"./vue.f36acd1f.GgcnQkjo.js";import{f as a,w as _,o as s,a as n}from"./entry.NcT0yg8a.js";const r=n("div",null,"About",-1),f={__name:"about",setup(u){return e({title:"About"}),(c,m)=>{const t=o;return s(),a(t,{name:"site"},{default:_(()=>[r]),_:1})}}};export{f as default};

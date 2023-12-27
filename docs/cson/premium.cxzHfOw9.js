@@ -1,1 +1,0 @@
-import{_ as t}from"./nuxt-layout.cPZnmSfC.js";import{u as o}from"./vue.f36acd1f.-tpB7FLv.js";import{f as a,w as _,o as m,a as r}from"./entry.kVMCQ-9D.js";const s=r("div",null,"Premium",-1),f={__name:"premium",setup(n){return o({title:"Premium"}),(u,c)=>{const e=t;return m(),a(e,{name:"site"},{default:_(()=>[s]),_:1})}}};export{f as default};

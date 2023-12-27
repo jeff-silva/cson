@@ -5,8 +5,8 @@ export default defineNuxtConfig({
   ssr: false,
   devtools: { enabled: true },
   app: {
-    // baseURL: 'cson',
-    buildAssetsDir: 'cson',
+    baseURL: '/cson/',
+    // buildAssetsDir: 'cson',
   },
   build: {
     transpile: ['vuetify'],
