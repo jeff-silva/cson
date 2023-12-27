@@ -1,1 +1,0 @@
-import{_ as t}from"./nuxt-layout.GuvDwgCd.js";import{u as o}from"./vue.f36acd1f.nVx8EVh2.js";import{f as s,w as a,o as _,a as r}from"./entry.M1ex32Tr.js";const n=r("div",null,"Offers",-1),l={__name:"offers",setup(c){return o({title:"Offers"}),(f,m)=>{const e=t;return _(),s(e,{name:"site"},{default:a(()=>[n]),_:1})}}};export{l as default};
