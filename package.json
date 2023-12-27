@@ -1,18 +1,10 @@
 {
-  "name": "nuxt-app",
-  "private": true,
+  "name": "cson",
+  "version": "1.0.0",
+  "repository": "https://github.com/jeff-silva/cson.git",
+  "author": "Jeferson Silva <jeferson.i.silva@gmail.com>",
+  "license": "MIT",
   "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
-  },
-  "devDependencies": {
-    "@invictus.codes/nuxt-vuetify": "^0.2.18",
-    "@faker-js/faker": "^7.6.0",
-    "@vueuse/core": "^9.13.0",
-    "lodash": "^4.17.21",
-    "nuxt": "^3.4.0"
+    "dev": "bash bin/dev"
   }
 }

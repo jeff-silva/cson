@@ -1,0 +1,25 @@
+version: '3.8'
+
+networks:
+  sail:
+    # driver: bridge
+
+volumes:
+  sail-mysql:
+    # driver: local
+  sail-redis:
+    driver: local
+
+services:
+  
+  # Frontend Nuxt
+  frontend:
+    image: node:18.16.0
+    working_dir: /var/www/html
+    command: bash -c "yarn install && yarn dev"
+    ports:
+      - ${FRONT_PORT:-3000}:3000
+    volumes:
+      - ./frontend:/var/www/html
+    environment:
+      - FRONT_API_URL=${FRONT_API_URL:-http://localhost:8080}

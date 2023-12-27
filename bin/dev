@@ -1,0 +1,11 @@
+#!/bin/sh
+
+reset
+
+# Cria o arquivo .env caso não exista
+if [ ! -f ".env" ]; then
+    cp ".env.example" ".env"
+fi
+
+# Start services
+docker-compose up --build --force-recreate --remove-orphans
