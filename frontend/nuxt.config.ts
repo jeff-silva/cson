@@ -5,7 +5,7 @@ export default defineNuxtConfig({
   ssr: false,
   devtools: { enabled: true },
   app: {
-    baseURL: 'cson',
+    // baseURL: 'cson',
     buildAssetsDir: 'assets',
   },
   build: {

@@ -1,0 +1,1 @@
+import{_ as t}from"./nuxt-layout.GuvDwgCd.js";import{u as o}from"./vue.f36acd1f.nVx8EVh2.js";import{f as a,w as _,o as s,a as n}from"./entry.M1ex32Tr.js";const r=n("div",null,"Level",-1),f={__name:"level",setup(c){return o({title:"Level"}),(l,m)=>{const e=t;return s(),a(e,{name:"site"},{default:_(()=>[r]),_:1})}}};export{f as default};
