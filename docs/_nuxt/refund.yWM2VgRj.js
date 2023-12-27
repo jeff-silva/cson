@@ -1,0 +1,1 @@
+import{_ as t}from"./nuxt-layout.yNcWoib1.js";import{u as o}from"./vue.f36acd1f.sXTS1QfM.js";import{f as a,w as n,o as _,a as s}from"./entry.AqhFVrLr.js";const r=s("div",null,"Refund",-1),i={__name:"refund",setup(u){return o({title:"Refund"}),(c,m)=>{const e=t;return _(),a(e,{name:"site"},{default:n(()=>[r]),_:1})}}};export{i as default};
